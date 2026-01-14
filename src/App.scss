@@ -3,13 +3,18 @@
 //шрифты
 @font-face {
   font-family: "Satoshi";
-  src: url("./fonts/Satoshi-Regular.ttf") format("truetype"),
-    url("./fonts/satoshi-Regular.otf") format("opentype");
+  src: url("./fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("./fonts/Satoshi-Regular.woff") format("woff"),
+    url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+    url("./fonts/Satoshi-Regular.eot") format("embedded-opentype");
 }
 
 @font-face {
   font-family: "Clash Display";
-  src: url("./fonts/ClashDisplay-Regular.otf") format("opentype");
+  src: url("./fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("./fonts/ClashDisplay-Regular.ttf") format("truetype"),
+    url("./fonts/ClashDisplay-Regular.eot") format("embedded-opentype");
 }
 
 html {
@@ -113,64 +118,55 @@ body {
       order: 2;
       flex: 0 1 100%;
     }
+    &__cart,
+    &__user {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 }
 
 @media (max-width: 480px) {
+  .header {
+    &__info {
+      margin-right: 4rem;
+    }
+  }
   .menu {
     &__list {
       display: none;
-    }
-    &__list_active {
-      position: absolute;
-      z-index: 7;
-      top: 0;
-      left: 0;
-      display: block;
-      overflow: auto;
-      background-color: $backgroundColorButtonDark;
-      width: 100vw;
-      height: 100vh;
-      padding-top: 10rem;
-      text-align: center;
-      transition: all 1s ease;
-      .menu__item {
-        &:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 4rem;
+      &_active {
+        position: absolute;
+        z-index: 7;
+        top: 0;
+        left: 0;
+        display: block;
+        overflow: auto;
+        background-color: $backgroundColorButtonDark;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 10rem;
+        text-align: center;
+        transition: all 1s ease;
+        .menu__item {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 4rem;
+          }
+        }
+        .menu__link {
+          font-size: 2.5rem;
+          color: $fontColorLight;
         }
       }
-      .menu__link {
-        font-size: 2.5rem;
-        color: $fontColorLight;
-      }
     }
+
     &__burger {
-      display: block;
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      width: 4rem;
-      height: 3rem;
-      z-index: 7;
-      span {
-        position: absolute;
-        background-color: $backgroundColorButtonDark;
-        left: 0;
-        top: 1.4rem;
-        width: 100%;
-        height: 0.3rem;
-        transition: all 0.3s ease 0s;
-      }
+      @include burger(2.6rem, 1rem);
+
       &::before,
       &::after {
-        content: "";
         background-color: $backgroundColorButtonDark;
-        position: absolute;
-        width: 100%;
-        height: 0.3rem;
-        left: 0;
-        transition: all 0.3s ease 0s;
       }
       &::before {
         top: 0;
@@ -178,24 +174,16 @@ body {
       &::after {
         bottom: 0;
       }
+
       &_active {
+        @include burger(4rem, 2rem);
         z-index: 8;
-        span:first-child {
-          position: absolute;
+        &::before {
           background-color: $fontColorLight;
-          left: 0;
-          top: 1.4rem;
-          width: 100%;
-          height: 0.3rem;
           transform: rotate(45deg);
         }
-        span:last-child {
-          position: absolute;
+        &::after {
           background-color: $fontColorLight;
-          left: 0;
-          top: 1.4rem;
-          width: 100%;
-          height: 0.3rem;
           transform: rotate(-45deg);
         }
       }

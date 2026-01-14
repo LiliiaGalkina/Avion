@@ -13,6 +13,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             <div className="header__search search">
               <button
                 className="search__img"
+                title="Click to search"
                 onClick={() => setIsSearchBlock(!isSearchBlock)}
                 style={{
                   opacity: isSearchBlock ? 0 : 1,
@@ -56,7 +57,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
           </div>
           <nav className="header__menu menu">
             <div
-              className="menu__burger"
+              className={isMenuOpen ? "menu__burger_active" : "menu__burger"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span></span>

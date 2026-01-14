@@ -1,44 +1,71 @@
 //переменные
-$fontColorLogo: #22202E;
-$fontColorLight: #FFFFFF;
-$fontColorMenu: #726E8D;
-$fontColor: #2A254B;
-$backgroundColorButtonDark: #2A254B;
-
+$fontColorLogo: #22202e;
+$fontColorLight: #ffffff;
+$fontColorMenu: #726e8d;
+$fontColor: #2a254b;
+$backgroundColorButtonDark: #2a254b;
 
 //миксины
-@mixin title($fontSize, $fontColor: $fontColor){
-    font-family: "Clash Display", sans-serif;
-    font-size: $fontSize;
-    line-height: 140%;
-    color: $fontColor;
+@mixin title($fontSize, $fontColor: $fontColor) {
+  font-family: "Clash Display", sans-serif;
+  font-size: $fontSize;
+  line-height: 140%;
+  color: $fontColor;
 }
 
 @mixin buttonImage {
-     max-width: 1.6rem;
-    padding: 0.1rem;
+  width: 1.6rem;
+  padding: 0.1rem;
+  border-radius: 2rem;
+  background-color: $fontColorLight;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  img {
+    min-width: 100%;
     border-radius: 2rem;
-    background-color: $fontColorLight;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    img {
-      width: 100%;
-      border-radius: 2rem;
-      &:hover {
-        box-shadow: 0 0 1rem $fontColorMenu;
-      }
+    &:hover {
+      box-shadow: 0 0 1rem $fontColorMenu;
     }
+  }
 }
 
 @mixin button($width, $backgroundColor, $color) {
-    width: $width;
-    height: 5.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1505;
-    background-color: $backgroundColor;
-    color: $color;
+  width: $width;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1505;
+  background-color: $backgroundColor;
+  color: $color;
+}
+
+@mixin burger($top, $right) {
+  display: block;
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: 2.4rem;
+  height: 2rem;
+  z-index: 8;
+  span {
+    position: absolute;
+    background-color: $backgroundColorButtonDark;
+    left: 0;
+    top: 0.9rem;
+    width: 100%;
+    height: 0.3rem;
+    transition: all 0.3s ease 0s;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
 }
