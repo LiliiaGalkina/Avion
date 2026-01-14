@@ -1,0 +1,44 @@
+//переменные
+$fontColorLogo: #22202E;
+$fontColorLight: #FFFFFF;
+$fontColorMenu: #726E8D;
+$fontColor: #2A254B;
+$backgroundColorButtonDark: #2A254B;
+
+
+//миксины
+@mixin title($fontSize, $fontColor: $fontColor){
+    font-family: "Clash Display", sans-serif;
+    font-size: $fontSize;
+    line-height: 140%;
+    color: $fontColor;
+}
+
+@mixin buttonImage {
+     max-width: 1.6rem;
+    padding: 0.1rem;
+    border-radius: 2rem;
+    background-color: $fontColorLight;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    img {
+      width: 100%;
+      border-radius: 2rem;
+      &:hover {
+        box-shadow: 0 0 1rem $fontColorMenu;
+      }
+    }
+}
+
+@mixin button($width, $backgroundColor, $color) {
+    width: $width;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1505;
+    background-color: $backgroundColor;
+    color: $color;
+}

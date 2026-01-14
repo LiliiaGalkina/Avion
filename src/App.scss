@@ -1,0 +1,204 @@
+@use "./variables" as *;
+
+//шрифты
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+    url("./fonts/satoshi-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./fonts/ClashDisplay-Regular.otf") format("opentype");
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  color: $fontColor;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 131rem;
+  padding: 0 1.5rem;
+}
+
+//HEADER
+.header {
+  padding: 2rem 0;
+
+  &__up {
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__cart,
+  &__user {
+    @include buttonImage;
+  }
+
+  &__user {
+    opacity: 0.5;
+  }
+
+  &__logo {
+    @include title(2.4rem, $fontColorLogo);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+}
+
+.search {
+  position: relative;
+  &__img {
+    @include buttonImage;
+    position: relative;
+  }
+
+  &__block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+  }
+
+  &__input {
+    border: 1px solid $fontColorMenu;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+  }
+  &__btn {
+    @include button(8.8rem, $backgroundColorButtonDark, $fontColorLight);
+    padding: 0 1rem;
+    height: 3.6rem;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.4rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    line-height: 100%;
+    color: $fontColorMenu;
+    transition: all 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__up {
+      flex-wrap: wrap;
+    }
+    &__search {
+      order: 2;
+      flex: 0 1 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    &__list {
+      display: none;
+    }
+    &__list_active {
+      position: absolute;
+      z-index: 7;
+      top: 0;
+      left: 0;
+      display: block;
+      overflow: auto;
+      background-color: $backgroundColorButtonDark;
+      width: 100vw;
+      height: 100vh;
+      padding-top: 10rem;
+      text-align: center;
+      transition: all 1s ease;
+      .menu__item {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4rem;
+        }
+      }
+      .menu__link {
+        font-size: 2.5rem;
+        color: $fontColorLight;
+      }
+    }
+    &__burger {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 4rem;
+      height: 3rem;
+      z-index: 7;
+      span {
+        position: absolute;
+        background-color: $backgroundColorButtonDark;
+        left: 0;
+        top: 1.4rem;
+        width: 100%;
+        height: 0.3rem;
+        transition: all 0.3s ease 0s;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: $backgroundColorButtonDark;
+        position: absolute;
+        width: 100%;
+        height: 0.3rem;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &_active {
+        z-index: 8;
+        span:first-child {
+          position: absolute;
+          background-color: $fontColorLight;
+          left: 0;
+          top: 1.4rem;
+          width: 100%;
+          height: 0.3rem;
+          transform: rotate(45deg);
+        }
+        span:last-child {
+          position: absolute;
+          background-color: $fontColorLight;
+          left: 0;
+          top: 1.4rem;
+          width: 100%;
+          height: 0.3rem;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
