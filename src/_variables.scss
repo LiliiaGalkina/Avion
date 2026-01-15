@@ -4,6 +4,9 @@ $fontColorLight: #ffffff;
 $fontColorMenu: #726e8d;
 $fontColor: #2a254b;
 $backgroundColorButtonDark: #2a254b;
+$backgroundColorInputLight: #F9F9F9;
+$backgroundColorInputDark: #4A4666;
+$borderColorFooter: #4E4D93;
 
 //миксины
 @mixin title($fontSize, $fontColor: $fontColor) {
@@ -40,6 +43,12 @@ $backgroundColorButtonDark: #2a254b;
   line-height: 1505;
   background-color: $backgroundColor;
   color: $color;
+  border: 0.1rem solid $backgroundColor;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $color;
+    color: $backgroundColor;
+  }
 }
 
 @mixin burger($top, $right) {
@@ -68,4 +77,11 @@ $backgroundColorButtonDark: #2a254b;
     left: 0;
     transition: all 0.3s ease 0s;
   }
+}
+
+@mixin input ($backgroundColor, $color) {
+padding: 0 1rem;
+font-size: 1.6rem;
+background-color: $backgroundColor;
+color: $color;
 }

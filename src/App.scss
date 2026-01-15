@@ -79,9 +79,8 @@ body {
   }
 
   &__input {
+    @include input($fontColorLight, $backgroundColorButtonDark);
     border: 1px solid $fontColorMenu;
-    padding: 0 1rem;
-    font-size: 1.6rem;
   }
   &__btn {
     @include button(8.8rem, $backgroundColorButtonDark, $fontColorLight);
@@ -188,5 +187,133 @@ body {
         }
       }
     }
+  }
+}
+
+@media (max-width: 375px) {
+  .search {
+    &__btn {
+      width: 6.5rem;
+    }
+  }
+}
+
+//FOOTER
+.footer {
+  padding: 5.8rem 0 2.5rem;
+  background-color: $backgroundColorButtonDark;
+  color: $fontColorLight;
+  font-size: 1.4rem;
+  &__title {
+    @include title(1.6rem, $fontColorLight);
+  }
+}
+
+.up-footer {
+  padding-bottom: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  border-bottom: 0.1rem solid $borderColorFooter;
+  &__address {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-style: normal;
+  }
+  &__menu {
+    flex: 0 1 25%;
+  }
+  &__sign-up {
+    flex: 0 1 50%;
+  }
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  &__link {
+    color: $fontColorLight;
+    transition: all 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sign-up-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  &__block {
+    display: flex;
+  }
+  &__input {
+    @include input($backgroundColorInputDark, $fontColorLight);
+    padding: 1.7rem 3.2rem;
+    width: 80%;
+  }
+  &__btn {
+    @include button(11.8rem, $fontColorLight, $backgroundColorButtonDark);
+  }
+}
+
+.down-footer {
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .up-footer {
+    &__address {
+      flex: 0 1 25%;
+    }
+    &__menu {
+      flex: 0 1 15%;
+    }
+    &__sign-up {
+      flex: 0 1 60%;
+    }
+  }
+  .sign-up-footer {
+    &__input {
+      padding: 0 1rem;
+    }
+    &__btn {
+      height: 4rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .up-footer {
+    flex-wrap: wrap;
+    &__address,
+    &__menu {
+      flex: 0 1 40%;
+    }
+    &__sign-up {
+      flex: 0 1 100%;
+    }
+  }
+  .down-footer {
+    flex-wrap: wrap;
   }
 }
