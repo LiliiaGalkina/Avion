@@ -317,3 +317,91 @@ body {
     flex-wrap: wrap;
   }
 }
+
+//HOMEPAGE
+//Hero
+.hero {
+  position: relative;
+  height: 70.4rem;
+
+  &__info {
+    position: absolute;
+    bottom: 13rem;
+    right: 8rem;
+    padding: 4.6rem 5.6rem;
+    max-width: 63rem;
+    height: 44.4rem;
+    background-color: $fontColorLight;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    @include title(3.2rem, $fontColorLogo);
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: $fontColorGrey;
+  }
+  &__button {
+    @include button(17rem, $backgroundColorInputLight, $fontColor);
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    &__info {
+      bottom: 10rem;
+      right: 2rem;
+      max-width: 50rem;
+      height: 30rem;
+      padding: 3rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60rem;
+    &__info {
+      max-width: 40rem;
+      height: auto;
+    }
+    &__title {
+      font-size: 2.6rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 50rem;
+    &__info {
+      position: static;
+      max-width: 100%;
+      padding-top: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 30rem;
+  }
+}
