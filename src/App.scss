@@ -79,11 +79,11 @@ body {
   }
 
   &__input {
-    @include input($fontColorLight, $backgroundColorButtonDark);
+    @include input($fontColorLight, $fontColor);
     border: 1px solid $fontColorMenu;
   }
   &__btn {
-    @include button(8.8rem, $backgroundColorButtonDark, $fontColorLight);
+    @include button(8.8rem, $fontColor, $fontColorLight);
     padding: 0 1rem;
     height: 3.6rem;
   }
@@ -141,7 +141,7 @@ body {
         left: 0;
         display: block;
         overflow: auto;
-        background-color: $backgroundColorButtonDark;
+        background-color: $fontColor;
         width: 100vw;
         height: 100vh;
         padding-top: 10rem;
@@ -165,7 +165,7 @@ body {
 
       &::before,
       &::after {
-        background-color: $backgroundColorButtonDark;
+        background-color: $fontColor;
       }
       &::before {
         top: 0;
@@ -201,7 +201,7 @@ body {
 //FOOTER
 .footer {
   padding: 5.8rem 0 2.5rem;
-  background-color: $backgroundColorButtonDark;
+  background-color: $fontColor;
   color: $fontColorLight;
   font-size: 1.4rem;
   &__title {
@@ -262,7 +262,7 @@ body {
     width: 80%;
   }
   &__btn {
-    @include button(11.8rem, $fontColorLight, $backgroundColorButtonDark);
+    @include button(11.8rem, $fontColorLight, $fontColor);
   }
 }
 
@@ -391,7 +391,7 @@ body {
 
 @media (max-width: 600px) {
   .hero {
-    height: 50rem;
+    height: auto;
     &__info {
       position: static;
       max-width: 100%;
@@ -400,8 +400,86 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .hero {
-    height: 30rem;
-  }
+//Brend
+.brand {
+	padding: 8rem 0 4rem;
+
+	&__title {
+		@include title(2.4rem);
+		margin-bottom: 3.6rem;
+		text-align: center;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2.2rem;
+	}
+}
+
+.card-brand {
+	padding: 4.8rem;
+	background-color: $backgroundColorInputLight;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__img {
+		display: block;
+		max-width: 2.4rem;
+		margin-bottom: 1.2rem;
+	}
+	
+	&__title {
+		@include title(2rem);
+		margin-bottom: 1.2rem;
+		
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 150%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.brand {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.card-brand {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 620px) {
+	.brand {
+		padding: 4.8rem 0 4rem;
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+	
+	.card-brand {
+		padding: 4.8rem;
+	}
+}
+
+@media (max-width: 375px) {
+	.brand {
+		&__title {
+			@include title(2rem);
+		}
+		&__items {
+			gap: 2.6rem;
+		}
+	}
+
+	.card-brand {
+		padding: 3.6rem;
+	}
 }

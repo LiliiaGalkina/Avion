@@ -4,7 +4,6 @@ $fontColorLight: #ffffff;
 $fontColorMenu: #726e8d;
 $fontColorGrey: #5B5676;
 $fontColor: #2a254b;
-$backgroundColorButtonDark: #2a254b;
 $backgroundColorInputLight: #F9F9F9;
 $backgroundColorInputDark: #4A4666;
 $borderColorFooter: #4E4D93;
@@ -62,7 +61,7 @@ $borderColorFooter: #4E4D93;
   z-index: 8;
   span {
     position: absolute;
-    background-color: $backgroundColorButtonDark;
+    background-color: $fontColor;
     left: 0;
     top: 0.9rem;
     width: 100%;

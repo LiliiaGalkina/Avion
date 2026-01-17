@@ -1,9 +1,11 @@
 import Hero from "./Hero";
+import Brand from "./Brand";
 
 const HomePage = () => {
     return (
         <main className="main">
-            <Hero/>
+			<Hero />
+			<Brand/>
         </main>
     )
 }
