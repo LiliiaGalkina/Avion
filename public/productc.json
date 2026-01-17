@@ -1,0 +1,134 @@
+[
+  {
+    "id": "pr1",
+    "name": "The Dandy chair",
+    "price": 250,
+    "category": "Chairs",
+    "image": "/image/products/product1.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 110,
+    "width": 75,
+    "depth": 50
+  },
+  {
+    "id": "pr2",
+    "name": "Rustic Vase Set",
+    "price": 155,
+    "category": "Ceramics",
+    "image": "/image/products/product2.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 30,
+    "width": 20,
+    "depth": 0
+  },
+  {
+    "id": "pr3",
+    "name": "The Silky Vase",
+    "price": 125,
+    "category": "Ceramics",
+    "image": "/image/products/product3.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 40,
+    "width": 15,
+    "depth": 0
+  },
+  {
+    "id": "pr4",
+    "name": "The Lucy Lamp",
+    "price": 399,
+    "category": "Light fittings",
+    "image": "/image/products/product4.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 30,
+    "width": 30,
+    "depth": 0
+  },
+  {
+    "id": "pr5",
+    "name": "The Light chair",
+    "price": 250,
+    "category": "Chairs",
+    "image": "/image/products/product5.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 110,
+    "width": 75,
+    "depth": 50
+  },
+  {
+    "id": "pr6",
+    "name": "The Wood chair",
+    "price": 250,
+    "category": "Chairs",
+    "image": "/image/products/product6.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 110,
+    "width": 75,
+    "depth": 50
+  },
+  {
+    "id": "pr7",
+    "name": "Basic white vase",
+    "price": 85,
+    "category": "Ceramics",
+    "image": "/image/products/product7.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 25,
+    "width": 15,
+    "depth": 0
+  },
+  {
+    "id": "pr8",
+    "name": "The little chair",
+    "price": 250,
+    "category": "Chairs",
+    "image": "/image/products/product8.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 80,
+    "width": 60,
+    "depth": 50
+  },
+  {
+    "id": "pr9",
+    "name": "The plastic chair",
+    "price": 250,
+    "category": "Chairs",
+    "image": "/image/products/product9.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 80,
+    "width": 60,
+    "depth": 50
+  },
+  {
+    "id": "pr10",
+    "name": "The gold lamps",
+    "price": 250,
+    "category": "Light fittings",
+    "image": "/image/products/product10.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 80,
+    "width": 60,
+    "depth": 0
+  },
+  {
+    "id": "pr11",
+    "name": "The white vase",
+    "price": 150,
+    "category": "Ceramics",
+    "image": "/image/products/product11.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 30,
+    "width": 20,
+    "depth": 0
+  },
+  {
+    "id": "pr12",
+    "name": "The Poplar suede sofa",
+    "price": 980,
+    "category": "Sofas",
+    "image": "/image/products/product12.png",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla qui obcaecati beatae mollitia blanditiis iusto, animi reiciendis unde quod autem sint magni ratione necessitatibus nihil quidem nemo officiis suscipit repellendus. Quidem sunt quod ipsum, aspernatur sapiente accusamus? Ratione qui numquam quae. Voluptatum nihil rerum exercitationem eum illum aliquam blanditiis facilis odio aliquid expedita sed, commodi ab asperiores amet quidem repellendus.",
+    "height": 90,
+    "width": 1900,
+    "depth": 80
+  }
+]

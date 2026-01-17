@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <main className="main">
 			<Hero />
-			<Brand/>
+			<Brand />
         </main>
     )
 }
