@@ -15,11 +15,11 @@ const HomePageProducts = () => {
     <div className="container products-container">
       <div className="products">
         {products.slice(0, 4).map((product) => (
-          <div className="products__card card-products" key={product.id}>
-            <img src={product.image} className="card-products__img" alt="" />
+          <a href="" className="products__card card-products" key={product.id}>
+            <img src={product.image} className="card-products__img" alt={product.alt} />
             <h3 className="card-products__title">{product.name}</h3>
             <p className="card-products__price">${product.price}</p>
-          </div>
+          </a>
         ))}
       </div>
       <button className="products-container__button">View collection</button>

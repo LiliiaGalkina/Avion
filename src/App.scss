@@ -326,11 +326,16 @@ body {
 }
 
 .card-products {
+	transition: all 0.5s ease;
+	&:hover {
+		transform: scale(1.05);
+	}
+
 	&__img {
 		margin-bottom: 2.4rem;
 		display: block;
 		width: 100%;
-		min-height: 37.5rem;
+		height: 37.5rem;
 		object-fit: cover;
 		object-position: center
 	}
@@ -349,7 +354,7 @@ body {
 @media (max-width: 1280px) {
 	.card-products {
 		&__img {
-			min-height: 25rem;
+			height: 25rem;
 		}
 	}
 }
@@ -361,21 +366,27 @@ body {
 	}
 	.card-products {
 		&__img {
-			min-height: 20rem;
+			height: 20rem;
 		}
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 	.products {
 		grid-template-columns: 1fr;
-		gap: 3rem;
+		gap: 4rem;
+	}
+		.card-products {
+		&__img {
+			height: 28rem;
+		}
 	}
 }
+
 //Hero
 .hero {
   position: relative;
-  height: 70.4rem;
+  height: 92rem;
 
   &__info {
     position: absolute;
@@ -412,6 +423,12 @@ body {
       object-position: center;
     }
   }
+}
+
+@media (max-width: 1280px) {
+	.hero {
+		height: 70.4rem;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -453,7 +470,7 @@ body {
   }
 }
 
-//Brend
+//Brand
 .brand {
 	padding: 8rem 0 4rem;
 
@@ -545,4 +562,190 @@ body {
 		@include button(17rem, $backgroundColorInputLight, $fontColor);
 		margin: 6.4rem auto 0;
 	}
+}
+
+//Started
+.started {
+	padding: 6rem 0;
+	
+	&__items {
+		display: flex;
+		gap: 1.6rem;
+	}
+	&__item {
+		flex: 0 1 50%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.started-info {
+	padding: 6.4rem 6.4rem 5.4rem;
+	background-color: $fontColor;
+	color: $fontColorLight;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 5rem;
+
+	&__title {
+		@include title(3.2rem, $fontColorLight);
+		margin-bottom: 1.2rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		line-height: 120%;
+	}
+
+	&__button {
+		@include button(17rem, $backgroundColorInputDark, $backgroundColorInputLight);
+	}
+}
+
+@media (max-width: 1070px) {
+	.started {
+		padding: 4rem 0 6rem;
+	}
+	.started-info {
+		padding: 3rem;
+
+		&__title {
+			@include title(2.6rem, $fontColorLight);
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.started {
+		&__items {
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.started-info {
+		&__title {
+			@include title(2rem, $fontColorLight);
+		}
+
+		&__text {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+//JoinUs
+.join-us {
+	height: 44.4rem;
+	background-image: url("/image/main/fon-join-club.jpg");
+	color: $fontColorLight;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-join-us {
+	max-width: 49.4rem;
+	text-align: center;
+	&__title {
+		@include title(3.2rem, $fontColorLight);
+		margin-bottom: 1.2rem;
+	}
+	&__text {
+		margin-bottom: 3rem;
+		font-size: 1.8rem;
+		line-height: 150%;
+	}
+	&__list {
+		margin-bottom: 4rem;
+		display: flex;
+		justify-content: center;
+		gap: 3.6rem;
+	}
+	&__list-item {
+		font-size: 1.6rem;
+		line-height: 150%;
+		display: flex;
+		align-items: center;
+		img {
+			margin-right: 0.4rem;
+			width: 1.6rem;
+			height: 1.6rem;
+			border-radius: 50%;
+		}
+	}
+	&__form {
+		width: 100%;
+	}
+}
+
+.form-join-us {
+	display: flex;
+
+	&__input {
+		height: 5.6rem;
+		flex: 1;
+		padding: 0 3.2rem;
+		font-size: 1.6rem;
+		background-color: $backgroundColorInputLight;
+		&::placeholder {
+			opacity: 0.2;
+		}
+	}
+	&__button {
+		@include button(11.8rem, $fontColor, $fontColorLight);
+		
+	}
+}
+
+@media (max-width: 540px) {
+	.join-us__info {
+		max-width: 40rem;
+	}
+	.info-join-us {
+		text-align: left;
+		&__title {
+			@include title(2.6rem, $fontColorLight)
+		}
+		&__list {
+			flex-direction: column;
+			gap: 0.8rem;
+		}
+	}
+	.form-join-us {
+		&__input {
+			padding: 0 1rem;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.join-us__info {
+		max-width: 30rem;
+	}
+	.info-join-us {
+		&__title {
+			@include title(2.2rem, $fontColorLight)
+		}
+		&__text {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 330px) {
+	.join-us__info {
+		max-width: 27rem;
+	}
+	
 }
