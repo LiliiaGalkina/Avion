@@ -6,7 +6,7 @@ const Brand = () => {
         <div className="brand__items">
           <div className="brand__item card-brand">
             <img
-              src="public/image/main/home/car.svg"
+              src="/image/main/home/car.svg"
               className="card-brand__img"
               alt="car icon"
             />

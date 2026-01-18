@@ -5,7 +5,7 @@ export const fetchProducts = createAsyncThunk<
   IProduct[],
   undefined,
   { rejectValue: string }
->("flights/fetchFlights", async function (_, { rejectWithValue }) {
+>("products/fetchProducts", async function (_, { rejectWithValue }) {
   const res = await fetch("./products.json");
   if (!res.ok) {
     return rejectWithValue("Server Error!");

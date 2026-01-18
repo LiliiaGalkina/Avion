@@ -319,6 +319,59 @@ body {
 }
 
 //HOMEPAGE
+.products {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.card-products {
+	&__img {
+		margin-bottom: 2.4rem;
+		display: block;
+		width: 100%;
+		min-height: 37.5rem;
+		object-fit: cover;
+		object-position: center
+	}
+
+	&__title {
+		@include title(2rem);
+		margin-bottom: 0.8rem;
+	}
+
+	&__price {
+		font-size: 1.8rem;
+		line-height: 150%;
+	}
+}
+
+@media (max-width: 1280px) {
+	.card-products {
+		&__img {
+			min-height: 25rem;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.products {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.card-products {
+		&__img {
+			min-height: 20rem;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.products {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
 //Hero
 .hero {
   position: relative;
@@ -481,5 +534,15 @@ body {
 
 	.card-brand {
 		padding: 3.6rem;
+	}
+}
+
+//HomePageProducts
+.products-container {
+	padding: 4rem 1.5rem;
+
+	&__button {
+		@include button(17rem, $backgroundColorInputLight, $fontColor);
+		margin: 6.4rem auto 0;
 	}
 }
