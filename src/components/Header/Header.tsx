@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 const [isSearchBlock, setIsSearchBlock] = useState(false);
@@ -64,14 +65,14 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             </div>
             <ul className={isMenuOpen ? "menu__list_active" : "menu__list"}>
               <li className="menu__item">
-                <a href="#" className="menu__link">
+                <Link to={"/"} className="menu__link">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#" className="menu__link">
+                <Link to={"/about"} className="menu__link">
                   About us
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
                 <a href="#" className="menu__link">
