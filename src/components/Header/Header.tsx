@@ -26,12 +26,13 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
               <div
                 className="search__block"
                 style={{
-                  opacity: isSearchBlock ? 1 : 0,
+                 visibility: isSearchBlock ? "visible" : "hidden",
                   zIndex: isSearchBlock ? 2 : 1,
                 }}
               >
                 <input
                   type="text"
+                  name="search-text"
                   className="search__input"
                   placeholder="search"
                 />
@@ -75,9 +76,9 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
                 </Link>
               </li>
               <li className="menu__item">
-                <a href="#" className="menu__link">
+                <Link to={"/catalog"} className="menu__link">
                   Сatalog
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
                 <a href="#" className="menu__link">

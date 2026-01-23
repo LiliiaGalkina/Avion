@@ -859,3 +859,34 @@ body {
     gap: 2rem;
   }
 }
+
+/*CATALOG*/
+.catalog {
+  &__title {
+    @include title(36px, $fontColorLight);
+    padding: 12.3rem 1.5rem 3.6rem 8rem;
+    background-image: url("/image/main/pdoduct-list/title-fon.jpg");
+    background-size: cover;
+    background-position: 50%;
+  }
+  &__filters {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.filters {
+  &__filter-items {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__category,
+  &__price,
+  &__sort {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+  }
+}
