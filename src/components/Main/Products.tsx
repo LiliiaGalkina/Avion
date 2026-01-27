@@ -10,20 +10,17 @@ type ProductsProps = {
 
 const Products: React.FC<ProductsProps> = ({ count }) => {
   const [countShowProducts, setCountShowProducts] = useState(count);
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  const products = useAppSelector((state) => state.products.products);
+  const products = useAppSelector((state) => state.products.filtered);
 
   const isThreeCards = useResponsiveEvent(1025);
   const isTwoCards = useResponsiveEvent(769);
-
-  console.log(isThreeCards)
-  console.log(isTwoCards)
-
 
  const handleLoadMore = () => {
     if (countShowProducts > 4 && count < products.length) {
@@ -31,6 +28,7 @@ const Products: React.FC<ProductsProps> = ({ count }) => {
     }
   };
 
+ 
   return (
     <div className="container products-container">
       <div className="products">

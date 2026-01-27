@@ -1,6 +1,26 @@
+import { useState } from "react";
 import Products from "../Products";
+import { useAppDispatch } from "../../../store/hook";
+import { sortProductsPrice, sortProductsCategory, sortProductsName } from "../../../store/productSlice";
 
 const Catalog = () => {
+    const [sortProducts, setSortProducts] = useState("");
+      const dispatch = useAppDispatch();
+
+     const handleSortChange = (
+       event: React.ChangeEvent<HTMLSelectElement>,
+     ) => {
+      const currentValue = event.target.value;
+      setSortProducts(currentValue);
+      if(currentValue === "category") {
+        dispatch(sortProductsCategory());
+      } else if(currentValue === "name") {
+        dispatch(sortProductsName());
+      } else if(currentValue === "price") {
+        dispatch(sortProductsPrice());
+      }
+     };
+
   return (
     <main className="catalog">
       <h2 className="catalog__title">All products</h2>
@@ -23,7 +43,7 @@ const Catalog = () => {
           </div>
           <div className="filters__sort-block">
             <label htmlFor="sort"></label>
-            <select name="sort" id="sort" className="filters__sort">
+            <select name="sort" id="sort" className="filters__sort" value={sortProducts} onChange={handleSortChange} >
               <option value="">Sort By</option>
               <option value="category">Category</option>
               <option value="name">Name</option>
