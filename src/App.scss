@@ -323,12 +323,15 @@ body {
 //HOMEPAGE
 .products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, minmax(20rem, 1fr));
+  gap: 4rem 2rem;
 }
 
 .card-products {
   transition: all 0.5s ease;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem $fontColorMenu;
+  overflow: hidden;
   &:hover {
     transform: scale(1.05);
   }
@@ -340,6 +343,10 @@ body {
     height: 37.5rem;
     object-fit: cover;
     object-position: center;
+  }
+
+  &__body {
+    padding: 0 1rem 1rem;
   }
 
   &__title {
@@ -356,7 +363,26 @@ body {
 @media (max-width: 1280px) {
   .card-products {
     &__img {
-      height: 25rem;
+      height: 30rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
+  .card-products {
+    &__img {
+      height: 35rem;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .card-products {
+    &__img {
+      height: 30rem;
     }
   }
 }
@@ -365,19 +391,44 @@ body {
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .card-products {
     &__img {
-      height: 20rem;
+      height: 35rem;
     }
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 580px) {
+  .card-products {
+    &__img {
+      height: 25rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
   .products {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    
   }
+    .card-products {
+      width: 80%;
+      justify-self: center;
+    &__img {
+      height: 35rem;
+    }
+  }
+}
+
+@media (max-width: 390px) {
   .card-products {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+    .card-products {
     &__img {
       height: 28rem;
     }
@@ -826,7 +877,7 @@ body {
     padding: 3rem 0 0;
     &__title {
       @include title(3rem);
-       margin: 0 auto 5rem;
+      margin: 0 auto 5rem;
     }
   }
   .about-hero {
@@ -849,10 +900,10 @@ body {
 
 @media (max-width: 375px) {
   .about {
-     padding: 2rem 0 0;
+    padding: 2rem 0 0;
     &__title {
-       @include title(2.6rem);
-        margin: 0 auto 3rem;
+      @include title(2.6rem);
+      margin: 0 auto 3rem;
     }
   }
   .about-hero {

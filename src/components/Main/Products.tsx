@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hook";
 import { fetchProducts } from "../../store/productSlice";
 import { Link } from "react-router-dom";
+import { useResponsiveEvent } from "../../store/hook";
 
 type ProductsProps = {
   count: number;
@@ -17,7 +18,14 @@ const Products: React.FC<ProductsProps> = ({ count }) => {
 
   const products = useAppSelector((state) => state.products.products);
 
-  const handleLoadMore = () => {
+  const isThreeCards = useResponsiveEvent(1025);
+  const isTwoCards = useResponsiveEvent(769);
+
+  console.log(isThreeCards)
+  console.log(isTwoCards)
+
+
+ const handleLoadMore = () => {
     if (countShowProducts > 4 && count < products.length) {
       setCountShowProducts(countShowProducts + 4);
     }
@@ -26,15 +34,17 @@ const Products: React.FC<ProductsProps> = ({ count }) => {
   return (
     <div className="container products-container">
       <div className="products">
-        {products.slice(0, countShowProducts).map((product) => (
+        {products.slice(0, count > 4 ? countShowProducts : isTwoCards ? 2 : isThreeCards ? 3 : 4).map((product) => (
           <a href="#" className="products__card card-products" key={product.id}>
             <img
               src={product.image}
               className="card-products__img"
               alt={product.alt}
             />
-            <h3 className="card-products__title">{product.name}</h3>
-            <p className="card-products__price">${product.price}</p>
+            <div className="card-products__body">
+              <h3 className="card-products__title">{product.name}</h3>
+              <p className="card-products__price">${product.price}</p>
+            </div>
           </a>
         ))}
       </div>
