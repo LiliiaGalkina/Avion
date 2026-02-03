@@ -4,6 +4,7 @@ import {
   type PayloadAction,
 } from "@reduxjs/toolkit";
 import type { IProduct, IProductState } from "./types";
+import { prices } from "./types";
 
 export const fetchProducts = createAsyncThunk<
   IProduct[],
@@ -21,8 +22,8 @@ export const fetchProducts = createAsyncThunk<
 const initialState: IProductState = {
   products: [],
   filtered: [],
-  filterByCategory: [],
-  filterByPrice: [],
+  filterByCategory: "",
+  filterByPrice: 0,
   cart: [],
   isLoading: false,
   isError: false,
@@ -42,6 +43,44 @@ const productSlice = createSlice({
     },
     sortProductsName: (state) => {
       state.filtered.sort((a, b) => a.name.localeCompare(b.name));
+    },
+    setSelectedCategory: (state, action) => {
+      state.filterByCategory = action.payload;
+    },
+    setSelectedPrice: (state, action) => {
+      state.filterByPrice = action.payload;
+    },
+    filterProducts: (state) => {
+      let priceRange, minRange:number, maxRange:number;
+      if (state.filterByPrice > 0) {
+        priceRange = prices
+          .filter((price) => price.includes(+state.filterByPrice))
+          .flat();
+          if(priceRange.length > 1){
+            minRange = priceRange[0];
+            maxRange = priceRange[1];
+          } else {
+            maxRange = priceRange[0];
+          }
+      }
+        if (state.filterByCategory !== "" && state.filterByPrice === 0) {
+          state.filtered = state.products.filter((product) =>
+            state.filterByCategory.includes(product.category)
+          );
+        } else if (state.filterByCategory === "" && state.filterByPrice > 0) {
+            state.filtered = state.products.filter((product) =>
+            priceRange.length > 1 ? product.price >= minRange && product.price <= maxRange : product.price >= maxRange,
+          );
+        } else if (state.filterByCategory !== "" && state.filterByPrice > 0) {
+          state.filtered = state.products.filter((product) =>
+            state.filterByCategory.includes(product.category) &&
+            (priceRange.length > 1
+              ? product.price >= minRange && product.price <= maxRange
+              : product.price >= maxRange)
+          );
+        } else {
+          state.filtered = state.products;
+        }
     },
   },
   extraReducers: (builder) => {
@@ -65,6 +104,13 @@ const productSlice = createSlice({
   },
 });
 
-export const { sortProductsPrice, sortProductsCategory, sortProductsName } = productSlice.actions;
+export const {
+  sortProductsPrice,
+  sortProductsCategory,
+  sortProductsName,
+  setSelectedCategory,
+  setSelectedPrice,
+  filterProducts,
+} = productSlice.actions;
 
 export default productSlice.reducer;

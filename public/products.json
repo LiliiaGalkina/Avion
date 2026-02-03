@@ -50,7 +50,7 @@
   {
     "id": "pr5",
     "name": "The Light chair",
-    "price": 250,
+    "price": 199,
     "category": "Chairs",
     "image": "/image/products/product5.png",
     "alt": "black chair",
@@ -62,7 +62,7 @@
   {
     "id": "pr6",
     "name": "The Wood chair",
-    "price": 250,
+    "price": 205,
     "category": "Chairs",
     "image": "/image/products/product6.png",
     "alt": "wood chair",
@@ -86,7 +86,7 @@
   {
     "id": "pr8",
     "name": "The little chair",
-    "price": 250,
+    "price": 175,
     "category": "Chairs",
     "image": "/image/products/product8.png",
     "alt": "brown chair without a back",
@@ -98,7 +98,7 @@
   {
     "id": "pr9",
     "name": "The plastic chair",
-    "price": 250,
+    "price": 260,
     "category": "Chairs",
     "image": "/image/products/product9.png",
     "alt": "plastic multicolored chairs",
@@ -110,7 +110,7 @@
   {
     "id": "pr10",
     "name": "The gold lamps",
-    "price": 250,
+    "price": 280,
     "category": "Light fittings",
     "image": "/image/products/product10.png",
     "alt": "chandelier with five shades",
@@ -134,7 +134,7 @@
   {
     "id": "pr12",
     "name": "The Dandy chair",
-    "price": 250,
+    "price": 340,
     "category": "Chairs",
     "image": "/image/products/product1.png",
     "alt": "black chair",
@@ -146,7 +146,7 @@
   {
     "id": "pr13",
     "name": "Rustic Vase Set",
-    "price": 155,
+    "price": 59,
     "category": "Ceramics",
     "image": "/image/products/product2.png",
     "alt": "three brown vases",
@@ -158,7 +158,7 @@
   {
     "id": "pr14",
     "name": "The Silky Vase",
-    "price": 125,
+    "price": 65,
     "category": "Ceramics",
     "image": "/image/products/product3.png",
     "alt": "grey vase",
@@ -182,7 +182,7 @@
   {
     "id": "pr16",
     "name": "The Light chair",
-    "price": 250,
+    "price": 210,
     "category": "Chairs",
     "image": "/image/products/product5.png",
     "alt": "black chair",
@@ -194,7 +194,7 @@
   {
     "id": "pr17",
     "name": "The Wood chair",
-    "price": 250,
+    "price": 162,
     "category": "Chairs",
     "image": "/image/products/product6.png",
     "alt": "wood chair",
@@ -206,7 +206,7 @@
   {
     "id": "pr18",
     "name": "Basic white vase",
-    "price": 85,
+    "price": 92,
     "category": "Ceramics",
     "image": "/image/products/product7.png",
     "alt": "white pot with green plant",
@@ -218,7 +218,7 @@
   {
     "id": "pr19",
     "name": "The little chair",
-    "price": 250,
+    "price": 275,
     "category": "Chairs",
     "image": "/image/products/product8.png",
     "alt": "brown chair without a back",
@@ -230,7 +230,7 @@
   {
     "id": "pr20",
     "name": "The plastic chair",
-    "price": 250,
+    "price": 149,
     "category": "Chairs",
     "image": "/image/products/product9.png",
     "alt": "plastic multicolored chairs",
@@ -242,7 +242,7 @@
   {
     "id": "pr21",
     "name": "The gold lamps",
-    "price": 250,
+    "price": 284,
     "category": "Light fittings",
     "image": "/image/products/product10.png",
     "alt": "chandelier with five shades",
@@ -254,7 +254,7 @@
   {
     "id": "pr22",
     "name": "The white vase",
-    "price": 150,
+    "price": 159,
     "category": "Ceramics",
     "image": "/image/products/product11.png",
     "alt": "white little vase",
@@ -266,7 +266,7 @@
   {
     "id": "pr23",
     "name": "The Dandy chair",
-    "price": 250,
+    "price": 235,
     "category": "Chairs",
     "image": "/image/products/product1.png",
     "alt": "black chair",
