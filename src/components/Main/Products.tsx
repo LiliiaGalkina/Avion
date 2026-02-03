@@ -32,19 +32,34 @@ const Products: React.FC<ProductsProps> = ({ count }) => {
   return (
     <div className="container products-container">
       <div className="products">
-        {products.slice(0, count > 4 ? countShowProducts : isTwoCards ? 2 : isThreeCards ? 3 : 4).map((product) => (
-          <a href="#" className="products__card card-products" key={product.id}>
-            <img
-              src={product.image}
-              className="card-products__img"
-              alt={product.alt}
-            />
-            <div className="card-products__body">
-              <h3 className="card-products__title">{product.name}</h3>
-              <p className="card-products__price">${product.price}</p>
-            </div>
-          </a>
-        ))}
+        {products
+          .slice(
+            0,
+            count > 4
+              ? countShowProducts
+              : isTwoCards
+                ? 2
+                : isThreeCards
+                  ? 3
+                  : 4,
+          )
+          .map((product) => (
+            <Link
+              to={`/catalog/${product.id}`}
+              className="products__card card-products"
+              key={product.id}
+            >
+              <img
+                src={product.image}
+                className="card-products__img"
+                alt={product.alt}
+              />
+              <div className="card-products__body">
+                <h3 className="card-products__title">{product.name}</h3>
+                <p className="card-products__price">${product.price}</p>
+              </div>
+            </Link>
+          ))}
       </div>
       {count == 4 ? (
         <Link to={"/catalog"} className="products-container__button">

@@ -410,11 +410,10 @@ body {
 @media (max-width: 480px) {
   .products {
     grid-template-columns: 1fr;
-    
   }
-    .card-products {
-      width: 80%;
-      justify-self: center;
+  .card-products {
+    width: 80%;
+    justify-self: center;
     &__img {
       height: 35rem;
     }
@@ -428,7 +427,7 @@ body {
 }
 
 @media (max-width: 320px) {
-    .card-products {
+  .card-products {
     &__img {
       height: 28rem;
     }
@@ -939,5 +938,140 @@ body {
   &__sort {
     padding: 0.5rem 1rem;
     font-size: 2rem;
+  }
+}
+
+//Product-page
+.product-page {
+  background-color: $backgroundColorInputLight;
+}
+
+.product-section {
+  padding: 5rem 0;
+
+  &__items {
+    display: flex;
+    gap: 6.5rem;
+  }
+
+  &__image {
+    flex: 0 1 49%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 0 1 49%;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+  }
+
+  &__title {
+    @include title(3.6rem);
+    margin-bottom: 1.6rem;
+  }
+
+  &__price {
+    margin-bottom: 5.2rem;
+    font-size: 2.4rem;
+  }
+
+  &__description {
+    margin-bottom: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    line-height: 160%;
+  }
+
+  &__sizes {
+    margin-bottom: 4.8rem;
+    margin-top: 2.4rem;
+    display: flex;
+    gap: 9.8rem;
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+  }
+
+  &__button {
+    @include button(14.3rem, $fontColor, $fontColorLight);
+  }
+}
+
+@media (max-width: 1140px) {
+  .product-section {
+    &__items {
+      gap: 4rem;
+    }
+    &__content {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-section {
+    &__content {
+      font-size: 1.4rem;
+    }
+    &__title {
+      @include title(3rem);
+    }
+    &__price {
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
+    &__description {
+      margin-bottom: 2rem;
+      gap: 1rem;
+      line-height: 120%;
+    }
+
+    &__sizes {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    &__items {
+      flex-direction: column-reverse;
+    }
+    &__image {
+      text-align: center;
+      img {
+        width: 80%;
+      }
+    }
+  &__content {
+    font-size: 1.6rem;
+    line-height: 160%;
+  }
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section {
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .product-section {
+    padding: 3rem 0;
+
+    &__sizes {
+      gap: 5rem;
+    }
   }
 }
