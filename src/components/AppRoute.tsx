@@ -4,6 +4,7 @@ import AboutPage from "./Main/About/AboutPage";
 import Catalog from "./Main/Catalog/Catalog";
 import Product from "./Main/Product/Product";
 import Cart from "./Cart/Cart";
+import Contacts from "./Main/Contacts/Contacts";
 
 const AppRoute = () => {
     return (
@@ -13,6 +14,7 @@ const AppRoute = () => {
             <Route path={"/catalog"} element={<Catalog/>}/>
             <Route path={"/catalog/:elemId"} element={<Product/>}/>
             <Route path={"/cart"} element={<Cart/>}/>
+            <Route path={"/contacts"} element={<Contacts/>}/>
         </Routes>
     )
 }
