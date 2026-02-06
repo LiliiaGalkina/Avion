@@ -1141,7 +1141,7 @@ body {
   }
 
   &__button {
-    @include button(17.2rem, $fontColor, $fontColorLight);
+    @include button(15rem, $fontColor, $fontColorLight);
     margin-left: auto;
   }
 }
@@ -1178,8 +1178,8 @@ body {
   }
 
   &__remove {
-    @include button(15rem, $fontColor, $fontColorLight);
-    height: 4rem;
+    @include button(10rem, $fontColor, $fontColorLight);
+    height: 3.4rem;
   }
 
   &__sum,
@@ -1231,10 +1231,6 @@ body {
       @include title(1.6rem);
       margin-bottom: 0.5rem;
     }
-    &__remove {
-      @include button(10rem, $fontColor, $fontColorLight);
-      height: 3.4rem;
-    }
   }
 }
 
@@ -1259,7 +1255,7 @@ body {
     &__sum {
       display: none;
     }
-    &__quantity  {
+    &__quantity {
       font-size: 1.6rem;
     }
   }
