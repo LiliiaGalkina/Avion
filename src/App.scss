@@ -49,6 +49,7 @@ body {
   &__cart,
   &__user {
     @include buttonImage;
+    position: relative;
   }
 
   &__user {
@@ -63,6 +64,16 @@ body {
     display: flex;
     align-items: center;
     gap: 1.6rem;
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: -0.8rem;
+    left: -0.2rem;
+    z-index: 5;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $fontColorCart;
   }
 }
 
@@ -1049,10 +1060,10 @@ body {
         width: 80%;
       }
     }
-  &__content {
-    font-size: 1.6rem;
-    line-height: 160%;
-  }
+    &__content {
+      font-size: 1.6rem;
+      line-height: 160%;
+    }
   }
 }
 
@@ -1072,6 +1083,187 @@ body {
 
     &__sizes {
       gap: 5rem;
+    }
+  }
+}
+
+//cart
+.cart {
+  padding: 6.4rem 0 4.8rem;
+  background-color: $backgroundColorInputLight;
+
+  &__title {
+    @include title(3.6rem);
+    margin-bottom: 4.8rem;
+  }
+
+  &__columns-title {
+    @include title(1.4rem);
+    width: 100%;
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-bottom: 0.1rem solid $borderColorCart;
+  }
+
+  &__column-title:first-child {
+    flex: 0 1 30%;
+  }
+
+  &__items {
+    margin-bottom: 2.8rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 0.1rem solid $borderColorCart;
+  }
+
+  &__total {
+    @include title(2rem);
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: right;
+    span:last-child {
+      @include title(2.4rem);
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 150%;
+    text-align: right;
+  }
+
+  &__button {
+    @include button(17.2rem, $fontColor, $fontColorLight);
+    margin-left: auto;
+  }
+}
+
+.cart-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__body {
+    flex: 0 1 30%;
+    display: flex;
+    gap: 2.1rem;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 10.9rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include title(2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  &__price {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+
+  &__remove {
+    @include button(15rem, $fontColor, $fontColorLight);
+    height: 4rem;
+  }
+
+  &__sum,
+  &__quantity input {
+    font-size: 1.8rem;
+    line-height: 150%;
+  }
+
+  &__quantity input {
+    max-width: 7rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cart {
+    &__column-title:first-child {
+      flex: 0 1 40%;
+    }
+  }
+  .cart-row {
+    &__body {
+      flex: 0 1 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    &__title {
+      @include title(3rem);
+      margin-bottom: 4rem;
+    }
+    &__total {
+      @include title(1.8rem);
+      span:last-child {
+        @include title(2rem);
+      }
+    }
+    &__column-title:first-child {
+      flex: 0 1 60%;
+    }
+  }
+
+  .cart-row {
+    &__body {
+      flex: 0 1 60%;
+    }
+    &__title {
+      @include title(1.6rem);
+      margin-bottom: 0.5rem;
+    }
+    &__remove {
+      @include button(10rem, $fontColor, $fontColorLight);
+      height: 3.4rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    padding: 3.6rem 0 5.5rem;
+
+    &__title {
+      @include title(2.4rem);
+    }
+    &__items {
+      padding-top: 0;
+    }
+    &__columns-title {
+      display: none;
+    }
+  }
+  .cart-row {
+      &__body {
+      flex: 0 1 80%;
+    }
+    &__sum {
+     font-size: 0;
+    }
+    &__quantity input {
+       max-width: 5rem;
+      font-size: 1.6rem;
     }
   }
 }

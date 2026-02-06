@@ -3,6 +3,7 @@ import HomePage from "./Main/HomePage/HomePage";
 import AboutPage from "./Main/About/AboutPage";
 import Catalog from "./Main/Catalog/Catalog";
 import Product from "./Main/Product/Product";
+import Cart from "./Cart/Cart";
 
 const AppRoute = () => {
     return (
@@ -11,6 +12,7 @@ const AppRoute = () => {
             <Route path={"/about"} element={<AboutPage/>}/>
             <Route path={"/catalog"} element={<Catalog/>}/>
             <Route path={"/catalog/:elemId"} element={<Product/>}/>
+            <Route path={"/cart"} element={<Cart/>}/>
         </Routes>
     )
 }

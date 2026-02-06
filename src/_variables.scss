@@ -5,9 +5,11 @@ $fontColorMenu: #726e8d;
 $fontColorGrey: #5B5676;
 $fontAboutTextColor: #505977;
 $fontColor: #2a254b;
+$fontColorCart: #da1212;
 $backgroundColorInputLight: #F9F9F9;
 $backgroundColorInputDark: #4A4666;
 $borderColorFooter: #4E4D93;
+$borderColorCart: #EBE8F4;
 
 //миксины
 @mixin title($fontSize, $fontColor: $fontColor) {

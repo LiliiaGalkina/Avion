@@ -1,13 +1,20 @@
 import { useMatch } from "react-router-dom";
-import { useAppSelector } from "../../../store/hook";
+import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import Brand from "../HomePage/Brand";
 import JoinUs from "../JoinUs";
+import { addToCart } from "../../../store/productSlice";
 
 const Product = () => {
   const match = useMatch("/catalog/:id");
   const productId = match?.params.id;
   const products = useAppSelector((state) => state.products.filtered);
   const [product] = products.filter((elem) => elem.id === productId);
+
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <main>
@@ -40,7 +47,7 @@ const Product = () => {
                     <span>{product.depth}</span>
                   </p>
                 </div>
-                <button className="product-section__button">Add to cart</button>
+                <button className="product-section__button" onClick={handleAddToCart}>Add to cart</button>
               </div>
             </div>
           </section>

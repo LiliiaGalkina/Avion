@@ -19,12 +19,15 @@ export const fetchProducts = createAsyncThunk<
   return data;
 });
 
+const cartState = localStorage.getItem("cart");
+const initialStateCart = cartState ? JSON.parse(cartState) : [];
+
 const initialState: IProductState = {
   products: [],
   filtered: [],
   filterByCategory: "",
   filterByPrice: 0,
-  cart: [],
+  cart: initialStateCart,
   isLoading: false,
   isError: false,
 };
@@ -33,6 +36,14 @@ const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
+    addToCart: (state, action) => {
+     const newItem = action.payload;
+      state.cart.push(newItem);
+    },
+    removeFromCart: (state, action) => {
+       const newItem = action.payload;
+      state.cart = state.cart.filter((item) => item.id !== newItem.id);
+    },
     sortProductsPrice: (state) => {
       state.products = state.filtered.sort((a, b) => a.price - b.price);
     },
@@ -111,6 +122,8 @@ export const {
   setSelectedCategory,
   setSelectedPrice,
   filterProducts,
+  addToCart,
+  removeFromCart
 } = productSlice.actions;
 
 export default productSlice.reducer;

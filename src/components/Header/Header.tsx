@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../store/hook";
 
 const Header = () => {
 const [isSearchBlock, setIsSearchBlock] = useState(false);
 const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+const cart = useAppSelector((state) => state.products.cart);
+
+
 
 
 
@@ -46,9 +51,10 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             </div>
             <div className="header__logo">Avion</div>
             <div className="header__info">
-              <button id="cart" className="header__cart">
+              <Link to={"/cart"} id="cart" className="header__cart">
                 <img src="/image/header/cart.svg" alt="cart icon" />
-              </button>
+                <span className="header__cart-count">{cart.length > 0 ? cart.length : "" }</span>
+              </Link>
               <button
                 className="header__user"
                 title="The function is not implemented"
