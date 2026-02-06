@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { removeFromCart } from "../../store/productSlice";
 
 const Cart = () => {
-    const [quantity, setQuantity] = useState(1);
     const [total, setTotal] = useState(0);
 
 
@@ -18,10 +17,10 @@ const Cart = () => {
  
      useEffect(() => {
         let sum = 0;
-        cartItems.forEach((item) => sum += (item.price * quantity));
+        cartItems.forEach((item) => sum += item.price);
         setTotal(sum);
         localStorage.setItem("cart", JSON.stringify(cartItems));
-     },[cartItems,quantity]);
+     },[cartItems]);
 
   return (
     <main>
@@ -49,16 +48,9 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="cart-row__quantity">
-                    <input
-                      type="number"
-                      value={quantity}
-                      onChange={(e) => setQuantity(+e.target.value)}
-                      min={1}
-                    />
-                  </div>
+                  <div className="cart-row__quantity">1</div>
                   <div className="cart-row__sum">
-                    ${quantity * cartItem.price}
+                    ${cartItem.price}
                   </div>
                 </div>
               </div>

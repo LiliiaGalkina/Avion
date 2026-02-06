@@ -1116,7 +1116,7 @@ body {
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     border-bottom: 0.1rem solid $borderColorCart;
   }
 
@@ -1183,14 +1183,12 @@ body {
   }
 
   &__sum,
-  &__quantity input {
+  &__quantity {
     font-size: 1.8rem;
     line-height: 150%;
   }
 
-  &__quantity input {
-    max-width: 7rem;
-    padding: 0.5rem;
+  &__quantity {
     text-align: center;
   }
 }
@@ -1255,15 +1253,28 @@ body {
     }
   }
   .cart-row {
-      &__body {
+    &__body {
       flex: 0 1 80%;
     }
     &__sum {
-     font-size: 0;
+      display: none;
     }
-    &__quantity input {
-       max-width: 5rem;
+    &__quantity  {
       font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .cart-row {
+    &__body {
+      flex: 0 1 85%;
+    }
+    &__title {
+      @include title(1.4rem);
+    }
+    &__price {
+      font-size: 1.4rem;
     }
   }
 }
