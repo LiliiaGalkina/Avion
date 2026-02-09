@@ -1,5 +1,6 @@
 import JoinUs from "../JoinUs";
 import Brand from "../HomePage/Brand";
+import Started from "../HomePage/Started";
 
 const Contacts = () => {
   return (
@@ -30,6 +31,7 @@ const Contacts = () => {
           </div>
         </section>
       </div>
+      <Started/>
       <Brand/>
       <JoinUs/>
     </main>
