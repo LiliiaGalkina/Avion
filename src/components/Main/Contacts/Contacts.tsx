@@ -1,3 +1,6 @@
+import JoinUs from "../JoinUs";
+import Brand from "../HomePage/Brand";
+
 const Contacts = () => {
   return (
     <main>
@@ -27,6 +30,8 @@ const Contacts = () => {
           </div>
         </section>
       </div>
+      <Brand/>
+      <JoinUs/>
     </main>
   );
 };

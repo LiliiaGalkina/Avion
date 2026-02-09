@@ -3,7 +3,7 @@ import './App.scss';
 import { HashRouter as Router } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import AppRoute from "./components/Approute";
+import AppRoute from "./components/AppRoute";
 
 function App() {
  

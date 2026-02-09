@@ -87,9 +87,9 @@ const cart = useAppSelector((state) => state.products.cart);
                 </Link>
               </li>
               <li className="menu__item">
-                <a href="#" className="menu__link">
+                <Link to={"/contacts"} className="menu__link">
                   Сontacts
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
