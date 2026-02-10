@@ -8,10 +8,6 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 const cart = useAppSelector((state) => state.products.cart);
 
-
-
-
-
     return (
       <header className="header">
         <div className="container">
@@ -26,7 +22,7 @@ const cart = useAppSelector((state) => state.products.cart);
                   zIndex: isSearchBlock ? 1 : 2,
                 }}
               >
-                <img src="/image/header/search.svg" alt="loupe icon" />
+                <img src="./image/header/search.svg" alt="loupe icon" />
               </button>
               <div
                 className="search__block"
@@ -52,7 +48,7 @@ const cart = useAppSelector((state) => state.products.cart);
             <div className="header__logo">Avion</div>
             <div className="header__info">
               <Link to={"/cart"} id="cart" className="header__cart">
-                <img src="/image/header/cart.svg" alt="cart icon" />
+                <img src="./image/header/cart.svg" alt="cart icon" />
                 <span className="header__cart-count">
                   {cart.length > 0 ? cart.length : ""}
                 </span>
@@ -61,7 +57,7 @@ const cart = useAppSelector((state) => state.products.cart);
                 className="header__user"
                 title="The function is not implemented"
               >
-                <img src="/image/header/user.svg" alt="user icon" />
+                <img src="./image/header/user.svg" alt="user icon" />
               </button>
             </div>
           </div>
