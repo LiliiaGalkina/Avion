@@ -73,7 +73,6 @@ const cart = useAppSelector((state) => state.products.cart);
                 <Link
                   to={"/"}
                   className="menu__link"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   Home
                 </Link>
@@ -82,7 +81,6 @@ const cart = useAppSelector((state) => state.products.cart);
                 <Link
                   to={"/about"}
                   className="menu__link"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   About us
                 </Link>
@@ -91,7 +89,6 @@ const cart = useAppSelector((state) => state.products.cart);
                 <Link
                   to={"/catalog"}
                   className="menu__link"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   Сatalog
                 </Link>
@@ -100,7 +97,6 @@ const cart = useAppSelector((state) => state.products.cart);
                 <Link
                   to={"/contacts"}
                   className="menu__link"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   Сontacts
                 </Link>
