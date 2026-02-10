@@ -1305,3 +1305,35 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+
+.phone,
+.email {
+  display: flex;
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    padding: 4rem 0;
+
+    &__title {
+      margin-bottom: 5rem;
+    }
+
+    &__items {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    padding: 2rem 0;
+
+    &__items {
+      flex-direction: column;
+      gap: 3rem;
+      font-size: 2.4rem;
+    }
+  }
+}
