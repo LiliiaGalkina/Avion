@@ -31,7 +31,7 @@ const cart = useAppSelector((state) => state.products.cart);
               <div
                 className="search__block"
                 style={{
-                 visibility: isSearchBlock ? "visible" : "hidden",
+                  visibility: isSearchBlock ? "visible" : "hidden",
                   zIndex: isSearchBlock ? 2 : 1,
                 }}
               >
@@ -53,7 +53,9 @@ const cart = useAppSelector((state) => state.products.cart);
             <div className="header__info">
               <Link to={"/cart"} id="cart" className="header__cart">
                 <img src="/image/header/cart.svg" alt="cart icon" />
-                <span className="header__cart-count">{cart.length > 0 ? cart.length : "" }</span>
+                <span className="header__cart-count">
+                  {cart.length > 0 ? cart.length : ""}
+                </span>
               </Link>
               <button
                 className="header__user"
@@ -72,22 +74,38 @@ const cart = useAppSelector((state) => state.products.cart);
             </div>
             <ul className={isMenuOpen ? "menu__list_active" : "menu__list"}>
               <li className="menu__item">
-                <Link to={"/"} className="menu__link">
+                <Link
+                  to={"/"}
+                  className="menu__link"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   Home
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to={"/about"} className="menu__link">
+                <Link
+                  to={"/about"}
+                  className="menu__link"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   About us
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to={"/catalog"} className="menu__link">
+                <Link
+                  to={"/catalog"}
+                  className="menu__link"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   Сatalog
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to={"/contacts"} className="menu__link">
+                <Link
+                  to={"/contacts"}
+                  className="menu__link"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
                   Сontacts
                 </Link>
               </li>

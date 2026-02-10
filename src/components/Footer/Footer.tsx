@@ -43,6 +43,7 @@ const Footer = () => {
                 type="email"
                 className="sign-up-footer__input"
                 placeholder="your@email.com"
+                required
               />
               <button className="sign-up-footer__btn">Sign up</button>
             </div>

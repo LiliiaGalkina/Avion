@@ -952,6 +952,52 @@ body {
   }
 }
 
+@media (max-width: 1140px) {
+  .catalog {
+    &__title {
+      padding: 8rem 1.5rem 3.6rem 8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    &__title {
+      padding: 6rem 1.5rem 3.6rem 4rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog {
+    &__title {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .filters {
+    &__category,
+    &__price,
+    &__sort {
+      padding: 0.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .filters {
+    &__filter-items {
+      gap: 0.8rem;
+    }
+    &__category,
+    &__price,
+    &__sort {
+      font-size: 1.18rem;
+    }
+  }
+}
+
 //Product-page
 .product-page {
   background-color: $backgroundColorInputLight;
@@ -1277,7 +1323,7 @@ body {
 
 //contacts
 .contacts {
- padding: 6.7rem 0 0;
+  padding: 6.7rem 0 0;
 
   &__title {
     @include title(3.6rem);

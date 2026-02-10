@@ -1,46 +1,50 @@
 import { useState } from "react";
 import Products from "../Products";
 import { useAppDispatch } from "../../../store/hook";
-import { sortProductsPrice, sortProductsCategory, sortProductsName, filterProducts, setSelectedCategory, setSelectedPrice } from "../../../store/productSlice";
+import {
+  sortProductsPrice,
+  sortProductsCategory,
+  sortProductsName,
+  filterProducts,
+  setSelectedCategory,
+  setSelectedPrice,
+} from "../../../store/productSlice";
 import { prices } from "../../../store/types";
 
-
 const Catalog = () => {
-    const [sortProducts, setSortProducts] = useState("");
-    const [filterProductsCategory, setFilterProductcCategory] = useState("");
-    const [filterProductsPrice, setFilterProductsPrice] = useState("");
+  const [sortProducts, setSortProducts] = useState("");
+  const [filterProductsCategory, setFilterProductcCategory] = useState("");
+  const [filterProductsPrice, setFilterProductsPrice] = useState("");
 
-      const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-  
+  const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const currentValue = event.target.value;
+    setSortProducts(currentValue);
+    if (currentValue === "category") {
+      dispatch(sortProductsCategory());
+    } else if (currentValue === "name") {
+      dispatch(sortProductsName());
+    } else if (currentValue === "price") {
+      dispatch(sortProductsPrice());
+    }
+  };
 
-     const handleSortChange = (
-       event: React.ChangeEvent<HTMLSelectElement>,
-     ) => {
-      const currentValue = event.target.value;
-      setSortProducts(currentValue);
-      if(currentValue === "category") {
-        dispatch(sortProductsCategory());
-      } else if(currentValue === "name") {
-        dispatch(sortProductsName());
-      } else if(currentValue === "price") {
-        dispatch(sortProductsPrice());
-      }
-     };
+  const handleFilterCategory = (
+    event: React.ChangeEvent<HTMLSelectElement>,
+  ) => {
+    const filterValue = event.target.value;
+    setFilterProductcCategory(filterValue);
+    dispatch(setSelectedCategory(filterValue));
+    dispatch(filterProducts());
+  };
 
-     const handleFilterCategory = ( event: React.ChangeEvent<HTMLSelectElement>) => {
-      const filterValue = event.target.value;
-      setFilterProductcCategory(filterValue);
-      dispatch(setSelectedCategory(filterValue));
-      dispatch(filterProducts())
-     }
-
-     const handleFilterPrice = (event: React.ChangeEvent<HTMLSelectElement>) => {
-      const filterValue = event.target.value;
-      setFilterProductsPrice(filterValue);
-      dispatch(setSelectedPrice(filterValue));
-      dispatch(filterProducts())
-     }
+  const handleFilterPrice = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const filterValue = event.target.value;
+    setFilterProductsPrice(filterValue);
+    dispatch(setSelectedPrice(filterValue));
+    dispatch(filterProducts());
+  };
 
   return (
     <main className="catalog">
@@ -61,7 +65,13 @@ const Catalog = () => {
               <option value="Light fittings">Light fittings</option>
               <option value="Sofas">Sofas</option>
             </select>
-            <select name="price" id="price" className="filters__price" value={filterProductsPrice} onChange={handleFilterPrice}>
+            <select
+              name="price"
+              id="price"
+              className="filters__price"
+              value={filterProductsPrice}
+              onChange={handleFilterPrice}
+            >
               <option value="">Price</option>
               {prices.map((price, index) => (
                 <option
