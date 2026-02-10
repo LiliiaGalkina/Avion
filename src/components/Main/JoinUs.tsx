@@ -10,9 +10,9 @@ const JoinUs = () => {
           sales, pop up stores and more
         </p>
         <ul className="info-join-us__list">
-          <li className="info-join-us__list-item"><img src="/image/main/home/checkmark.svg"/><span>Exclusive offers</span></li>
-          <li className="info-join-us__list-item"><img src="/image/main/home/checkmark.svg"/><span>Free events</span></li>
-          <li className="info-join-us__list-item"><img src="/image/main/home/checkmark.svg"/><span>Large discounts</span></li>
+          <li className="info-join-us__list-item"><img src="./image/main/home/checkmark.svg"/><span>Exclusive offers</span></li>
+          <li className="info-join-us__list-item"><img src="./image/main/home/checkmark.svg"/><span>Free events</span></li>
+          <li className="info-join-us__list-item"><img src="./image/main/home/checkmark.svg"/><span>Large discounts</span></li>
         </ul>
         <form action="#" className="info-join-us__form form-join-us">
           <input

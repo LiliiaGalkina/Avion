@@ -17,7 +17,7 @@ const Started = () => {
           </div>
           <div className="started__item">
             <img
-              src="/image/main/home/started.png"
+              src="./image/main/home/started.png"
               alt="yellow chair and white furniture in a bright room"
             />
           </div>

@@ -6,7 +6,7 @@ const Brand = () => {
         <div className="brand__items">
           <div className="brand__item card-brand">
             <img
-              src="/image/main/home/car.svg"
+              src="./image/main/home/car.svg"
               className="card-brand__img"
               alt="car icon"
             />
@@ -17,7 +17,7 @@ const Brand = () => {
           </div>
           <div className="brand__item card-brand">
             <img
-              src="/image/main/home/checkmark.svg"
+              src="./image/main/home/checkmark.svg"
               className="card-brand__img"
               alt="checkmark icon"
             />
@@ -28,7 +28,7 @@ const Brand = () => {
           </div>
           <div className="brand__item card-brand">
             <img
-              src="/image/main/home/purchase.svg"
+              src="./image/main/home/purchase.svg"
               className="card-brand__img"
               alt="purchase icon"
             />
@@ -40,7 +40,7 @@ const Brand = () => {
           </div>
           <div className="brand__item card-brand">
             <img
-              src="/image/main/home/sprout.svg"
+              src="./image/main/home/sprout.svg"
               className="card-brand__img"
               alt="sprout icon"
             />

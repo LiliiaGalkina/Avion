@@ -54,42 +54,42 @@ const Footer = () => {
           <div className="down-footer__social social">
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/linkedin.svg"
+                src="./image/footer/linkedin.svg"
                 alt="linkedin"
                 className="social__item"
               />
             </a>
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/facebook.svg"
+                src="./image/footer/facebook.svg"
                 alt="facebook"
                 className="social__item"
               />
             </a>
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/instagram.svg"
+                src="./image/footer/instagram.svg"
                 alt="instagram"
                 className="social__item"
               />
             </a>
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/skype.svg"
+                src="./image/footer/skype.svg"
                 alt="skype"
                 className="social__item"
               />
             </a>
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/twitter.svg"
+                src="./image/footer/twitter.svg"
                 alt="twitter"
                 className="social__item"
               />
             </a>
             <a href="#" className="social__link" target="_blank">
               <img
-                src="/image/footer/pinterest.svg"
+                src="./image/footer/pinterest.svg"
                 alt="pinterest"
                 className="social__item"
               />

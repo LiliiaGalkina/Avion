@@ -20,13 +20,13 @@ const AboutHero = () => {
         </div>
         <div className="about-hero__img">
           <img
-            src="/image/main/about/brand1.png"
+            src="./image/main/about/brand1.png"
             alt="the interior is decorated in beige tones"
           />
         </div>
         <div className="about-hero__img">
           <img
-            src="/image/main/about/brand2.png"
+            src="./image/main/about/brand2.png"
             alt="the interior is decorated in light tones"
           />
         </div>

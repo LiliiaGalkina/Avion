@@ -63,7 +63,6 @@ const Catalog = () => {
               <option value="Chairs">Chairs</option>
               <option value="Ceramics">Ceramics</option>
               <option value="Light fittings">Light fittings</option>
-              <option value="Sofas">Sofas</option>
             </select>
             <select
               name="price"
