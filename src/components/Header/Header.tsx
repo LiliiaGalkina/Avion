@@ -68,36 +68,27 @@ const cart = useAppSelector((state) => state.products.cart);
             >
               <span></span>
             </div>
-            <ul className={isMenuOpen ? "menu__list_active" : "menu__list"}>
+            <ul
+              className={isMenuOpen ? "menu__list_active" : "menu__list"}
+              onClick={() => setIsMenuOpen(false)}
+            >
               <li className="menu__item">
-                <Link
-                  to={"/"}
-                  className="menu__link"
-                >
+                <Link to={"/"} className="menu__link">
                   Home
                 </Link>
               </li>
               <li className="menu__item">
-                <Link
-                  to={"/about"}
-                  className="menu__link"
-                >
+                <Link to={"/about"} className="menu__link">
                   About us
                 </Link>
               </li>
               <li className="menu__item">
-                <Link
-                  to={"/catalog"}
-                  className="menu__link"
-                >
+                <Link to={"/catalog"} className="menu__link">
                   Сatalog
                 </Link>
               </li>
               <li className="menu__item">
-                <Link
-                  to={"/contacts"}
-                  className="menu__link"
-                >
+                <Link to={"/contacts"} className="menu__link">
                   Сontacts
                 </Link>
               </li>
